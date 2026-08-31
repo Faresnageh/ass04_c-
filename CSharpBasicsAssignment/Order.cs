@@ -1,0 +1,27 @@
+﻿namespace CSharpBasicsAssignment
+{
+    internal class Order
+    {
+        public int OrderId;
+        public string CustomerName;
+        public int Quantity;
+        public decimal UnitPrice;
+        public decimal TotalPrice;
+        public bool IsPaid;
+        public double DiscountPercent;
+        public string ShippingCity;
+        public char Priority;
+        public long ItemCode;
+        public void CalculateTotal()
+        {
+            TotalPrice = Quantity * UnitPrice * (1m - (decimal)DiscountPercent / 100m);
+        }
+        public void PrintSummary()
+        {
+            Console.WriteLine($"OrderId : {OrderId}");
+            Console.WriteLine($"CustomerName : {CustomerName}");
+            Console.WriteLine($"TotalPrice = {TotalPrice}");
+            Console.WriteLine($"IsPaid : {IsPaid}");
+        }
+    }
+}
