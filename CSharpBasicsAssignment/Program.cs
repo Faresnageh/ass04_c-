@@ -136,7 +136,8 @@ void Part_D()
     Console.WriteLine(total);
     total %= 3;
     Console.WriteLine(total);
-    total += 5; //is the same as total = total + 5
+    total += 5; //is the same as total = total + 5 
+    // (x = x + 5:) = (x += 5;)
     Console.WriteLine(total);
 
 
